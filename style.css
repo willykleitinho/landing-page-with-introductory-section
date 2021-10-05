@@ -1,0 +1,206 @@
+:root {
+  --clr-1: hsl(257, 40%, 49%);
+  --clr-2: hsl(300, 69%, 71%);
+
+  --font-family-heading: "Poppins", Helvetica, Arial, sans-serif;
+  /* available font widths: 400, 600 */
+
+  --font-family-body: "Open Sans", Helvetica, Arial, sans-serif;
+  /* available font widths: 400 */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background: var(--clr-2);
+  color: white;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--font-family-body);
+  color: white;
+  background-image: url("images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: var(--clr-1);
+  background-size: contain;
+}
+
+main {
+  height: 100vh;
+  padding: 13rem 3.5rem;
+  max-width: 38rem;
+  margin: auto;
+}
+
+main > div {
+  text-align: center;
+}
+
+.logo {
+  width: 13rem;
+  position: absolute;
+  top: 3.5rem;
+  left: 3.5rem;
+}
+
+.illustration {
+  width: 100%;
+  margin-bottom: 15%;
+}
+
+h1 {
+  font-family: var(--font-family-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  width: 65%;
+  padding: 1rem 3rem;
+  background-color: white;
+  color: var(--clr-1);
+  transition: 100ms;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 10rem;
+}
+
+.button:hover {
+  background-color: var(--clr-2);
+  color: white;
+}
+
+.icons {
+  list-style-type: none;
+  font-size: 1.6rem;
+  display: flex;
+  position: absolute;
+  bottom: 3.5rem;
+  left: 0;
+  justify-content: center;
+  width: 100%;
+}
+
+.icons li {
+  flex-shrink: 0;
+}
+
+li + li {
+  margin-left: 1rem;
+}
+
+.icons i {
+  padding: 0.75rem;
+  border: 1px solid;
+  color: white;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: 100ms;
+}
+
+.icons i[class*="fa-facebook"] {
+  padding: 0.75rem 1rem;
+}
+
+.icons i:hover {
+  color: var(--clr-2);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: var(--font-family-heading);
+  color: #eee;
+  padding-top: 1.5rem;
+}
+
+.attribution a {
+  color: white;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-image: url("images/bg-desktop.svg");
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    max-width: none;
+    padding: 7rem;
+  }
+
+  .logo {
+    width: 22rem;
+    top: 5.5rem;
+    left: 7rem;
+  }
+
+  .illustration {
+    margin: 0;
+    flex-basis: 55%;
+    flex-shrink: 0;
+    align-self: end;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 4.1rem;
+    line-height: 6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  main > div {
+    text-align: left;
+    margin-left: 5rem;
+  }
+
+  .button {
+    width: auto;
+    padding: 1.7rem 6.5rem;
+    font-size: 2rem;
+    border-radius: 10rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .icons {
+    justify-content: right;
+    padding-right: 7rem;
+  }
+
+  .icons i {
+    padding: 1.2rem;
+  }
+
+  .icons i[class*="fa-facebook"] {
+    padding: 1.2rem 1.5rem;
+  }
+
+  li + li {
+    margin-left: 1.5rem;
+  }
+}
